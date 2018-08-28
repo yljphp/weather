@@ -3,14 +3,14 @@
 <p align="center">:rainbow: 基于高德地图接口的 PHP 天气信息组件.</p>
 
 [![Build Status](https://travis-ci.org/yljphp/weather.svg?branch=master)](https://travis-ci.org/yljphp/weather)
-
-## Installing
+![StyleCI build status](https://github.styleci.io/repos/146393437/shield) 
+## 安装
 
 ```shell
 $ composer require yljphp/weather -vvv
 ```
 
-## Usage
+## 使用
 
 TODO
 
