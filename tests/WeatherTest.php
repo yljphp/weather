@@ -3,11 +3,10 @@
  * Created by PhpStorm.
  * User: yanglijing
  * Date: 2018/8/28
- * Time: 上午11:42
+ * Time: 上午11:42.
  */
 
 namespace Yljphp\Weather\Tests;
-
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -20,7 +19,6 @@ use GuzzleHttp\Psr7\Response;
 
 class WeatherTest extends TestCase
 {
-
     // 检查 $type 参数
     public function testGetWeatherWithInvalidType()
     {
@@ -70,7 +68,7 @@ class WeatherTest extends TestCase
                 'city' => '深圳',
                 'output' => 'json',
                 'extensions' => 'base',
-            ]
+            ],
         ])->andReturn($response);
 
         // 将 `getHttpClient` 方法替换为上面创建的 http client 为返回值的模拟方法。
@@ -96,11 +94,10 @@ class WeatherTest extends TestCase
         $w->allows()->getHttpClient()->andReturn($client);
 
         $this->assertSame('<hello>content</hello>', $w->getWeather('深圳', 'all', 'xml'));
-
     }
 
     /**
-     *  http client 调用时发生异常
+     *  http client 调用时发生异常.
      */
     public function testGetWeatherWithGuzzleRuntimeException()
     {
